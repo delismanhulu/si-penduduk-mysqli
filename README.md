@@ -1,4 +1,4 @@
-WARNING
+# WARNING
 
 - Aplikasi Ini Di Larang Menjadikan Konten Anda Di Youtube Atau Menjual Komersial Baik Di Perusahaan Maupun Di Instansi Pemerintah.
 - Aplikasi ini tidak untuk di perjualbelikan kembali ya,
@@ -15,11 +15,12 @@ WARNING
 - lalu pindahkan filenya di htdocs
 - lalu buka browser Google Chrome atau mozila anda ketik localhost/folderanda (tp pastikan port Apache dan folder anda di hatdoc)
 
-# untuk login
+# Username dan Password
 
 username : admin
 password : admin
 
-BY : Layanan Coding
+Kredit : LAYANAN CODING
 
-Web site : https://layanancoding.com
+# Download Aplikasi Lainnya
+https://layanancoding.com/daftar-aplikasi
