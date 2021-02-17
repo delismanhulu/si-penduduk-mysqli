@@ -1,9 +1,9 @@
 <?php 
 include'koneksi.php';
  if(isset($_POST["btnlogin"])){
- $txtusername =$_POST['txtusername'];
- $txtpassword =$_POST['txtpassword'];
- $cek = mysqli_query($konek, "SELECT * FROM tbl_user where user_name='".$_POST['txtusername']."' AND password='".$_POST['txtpassword']."'");
+ $txtusername =mysqli_real_escape_string($konek, $_POST['txtusername']);
+ $txtpassword = md5($_POST['txtpassword']);
+ $cek = mysqli_query($konek, "SELECT * FROM tbl_user where user_name='".$_POST['txtusername']."' AND password='".md5($_POST['txtpassword'])."'");
         $hasil = mysqli_fetch_array($cek);
         $count = mysqli_num_rows($cek);
 

@@ -3,8 +3,8 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 20, 2018 at 02:53 PM
--- Server version: 5.6.20
+-- Generation Time: 17 Feb 2021 pada 16.54
+-- Versi Server: 5.6.20
 -- PHP Version: 5.5.15
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -23,31 +23,26 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_agama`
+-- Struktur dari tabel `tbl_agama`
 --
 
 CREATE TABLE IF NOT EXISTS `tbl_agama` (
 `kode` int(11) NOT NULL,
   `uraian` varchar(40) DEFAULT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
--- Dumping data for table `tbl_agama`
+-- Dumping data untuk tabel `tbl_agama`
 --
 
 INSERT INTO `tbl_agama` (`kode`, `uraian`) VALUES
-(3, 'Kristen'),
-(4, 'Islam'),
-(5, 'Hindu'),
-(7, 'Bundha'),
-(8, 'eeee'),
-(9, '22222222222222222'),
-(10, '222');
+(1, 'Islam'),
+(2, 'Kristen');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_kematian`
+-- Struktur dari tabel `tbl_kematian`
 --
 
 CREATE TABLE IF NOT EXISTS `tbl_kematian` (
@@ -56,19 +51,12 @@ CREATE TABLE IF NOT EXISTS `tbl_kematian` (
   `tgl_kematian` date DEFAULT NULL,
   `tempat` varchar(200) DEFAULT NULL,
   `penyebab_kematian` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
-
---
--- Dumping data for table `tbl_kematian`
---
-
-INSERT INTO `tbl_kematian` (`kode`, `kd_warga`, `tgl_kematian`, `tempat`, `penyebab_kematian`) VALUES
-(1, 8, '2018-10-12', '222222', '222');
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_lahir`
+-- Struktur dari tabel `tbl_lahir`
 --
 
 CREATE TABLE IF NOT EXISTS `tbl_lahir` (
@@ -85,45 +73,44 @@ CREATE TABLE IF NOT EXISTS `tbl_lahir` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_lurah`
+-- Struktur dari tabel `tbl_lurah`
 --
 
 CREATE TABLE IF NOT EXISTS `tbl_lurah` (
 `kode` int(11) NOT NULL,
   `uraian` varchar(40) DEFAULT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
--- Dumping data for table `tbl_lurah`
+-- Dumping data untuk tabel `tbl_lurah`
 --
 
 INSERT INTO `tbl_lurah` (`kode`, `uraian`) VALUES
-(2, 'Damai Sejati'),
-(3, 'Desa Damai');
+(1, 'DAMAI');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_pekerjaan`
+-- Struktur dari tabel `tbl_pekerjaan`
 --
 
 CREATE TABLE IF NOT EXISTS `tbl_pekerjaan` (
 `kode` int(11) NOT NULL,
   `uraian` varchar(40) DEFAULT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
--- Dumping data for table `tbl_pekerjaan`
+-- Dumping data untuk tabel `tbl_pekerjaan`
 --
 
 INSERT INTO `tbl_pekerjaan` (`kode`, `uraian`) VALUES
-(3, 'Tidak Bekerja'),
-(4, 'Petani2');
+(1, 'Wira Swasta'),
+(2, 'Petani');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_pendatang`
+-- Struktur dari tabel `tbl_pendatang`
 --
 
 CREATE TABLE IF NOT EXISTS `tbl_pendatang` (
@@ -138,51 +125,38 @@ CREATE TABLE IF NOT EXISTS `tbl_pendatang` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_pendidikan`
+-- Struktur dari tabel `tbl_pendidikan`
 --
 
 CREATE TABLE IF NOT EXISTS `tbl_pendidikan` (
 `kode` int(11) NOT NULL,
   `uraian` varchar(40) DEFAULT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
--- Dumping data for table `tbl_pendidikan`
+-- Dumping data untuk tabel `tbl_pendidikan`
 --
 
 INSERT INTO `tbl_pendidikan` (`kode`, `uraian`) VALUES
-(3, 'SD'),
-(4, 'SMP'),
-(5, 'SMA'),
-(6, 'D1'),
-(7, 'D2'),
-(8, 'D3'),
-(9, 'S1'),
-(10, 'S2');
+(1, 'SMA'),
+(2, 'SMP'),
+(3, 'SD');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_penduduk_tetap`
+-- Struktur dari tabel `tbl_penduduk_tetap`
 --
 
 CREATE TABLE IF NOT EXISTS `tbl_penduduk_tetap` (
 `kode` int(11) NOT NULL,
   `kd_warga` int(11) NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
-
---
--- Dumping data for table `tbl_penduduk_tetap`
---
-
-INSERT INTO `tbl_penduduk_tetap` (`kode`, `kd_warga`) VALUES
-(1, 0),
-(2, 7);
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_pindah`
+-- Struktur dari tabel `tbl_pindah`
 --
 
 CREATE TABLE IF NOT EXISTS `tbl_pindah` (
@@ -193,38 +167,32 @@ CREATE TABLE IF NOT EXISTS `tbl_pindah` (
   `kecamatan` varchar(100) DEFAULT NULL,
   `lurah` varchar(100) DEFAULT NULL,
   `tgl_pindah` date DEFAULT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
-
---
--- Dumping data for table `tbl_pindah`
---
-
-INSERT INTO `tbl_pindah` (`kode`, `kd_warga`, `alasan_pindah`, `alamat_pindah`, `kecamatan`, `lurah`, `tgl_pindah`) VALUES
-(1, 9, 'wwwww  ', 'eeee', 'rrrrr', 'rrrr  ', '2018-10-18');
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_user`
+-- Struktur dari tabel `tbl_user`
 --
 
 CREATE TABLE IF NOT EXISTS `tbl_user` (
 `kode` int(11) NOT NULL,
   `user_name` varchar(40) DEFAULT NULL,
   `password` varchar(40) DEFAULT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
--- Dumping data for table `tbl_user`
+-- Dumping data untuk tabel `tbl_user`
 --
 
 INSERT INTO `tbl_user` (`kode`, `user_name`, `password`) VALUES
-(2, 'ADMIN', 'ADMIN');
+(2, 'admin', '21232f297a57a5a743894a0e4a801fc3'),
+(4, 'layanancoding', '84b201ebea19cfb6fc14e2680789204e');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_warga`
+-- Struktur dari tabel `tbl_warga`
 --
 
 CREATE TABLE IF NOT EXISTS `tbl_warga` (
@@ -244,19 +212,16 @@ CREATE TABLE IF NOT EXISTS `tbl_warga` (
   `negara` varchar(30) NOT NULL,
   `status_kawin` varchar(20) NOT NULL,
   `tempat_lahir` varchar(100) NOT NULL,
-  `jenis` varchar(20) NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+  `jenis` varchar(20) NOT NULL,
+  `tanggal` date NOT NULL
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
--- Dumping data for table `tbl_warga`
+-- Dumping data untuk tabel `tbl_warga`
 --
 
-INSERT INTO `tbl_warga` (`kode`, `kd_lurah`, `kd_pekerjaan`, `kd_pendidikan`, `kd_agama`, `nik`, `nama`, `tgl_lahir`, `jenis_kelamin`, `alamat`, `kecamatan`, `kabupaten`, `provinsi`, `negara`, `status_kawin`, `tempat_lahir`, `jenis`) VALUES
-(6, 2, 3, 6, 3, '92929292929', 'DELISMAN HULU', '2018-10-18', 'Laki-Laki', '22', '22', '22', 'Sumatera Utara', 'WNI', 'Belum Menikah', 'MEDAN', 'Pendatang'),
-(7, 2, 3, 7, 7, '222222222222', 'Afriadi', '2018-10-18', 'Laki-Laki', 'Bilal', '2', '22', 'Sumatera Utara', 'WNI222', 'Sudah Menikah', 'MEDAN', 'Tetap'),
-(8, 2, 3, 3, 3, '3333333333', 'H.Ishaq Naharuddin MA', '2018-10-15', 'Perempuan', '2', '2', '2', 'Sumatera Utara2', 'WNI', 'Sudah Menikah', 'mEDNASFADSFADSFADS', 'Meninggal'),
-(9, 2, 3, 3, 3, '2222222', '2222', '2018-10-12', 'Perempuan', '2', '33', '33', 'Sumatera Utara2', 'WNI', 'Sudah Menikah', '222', 'Pindah'),
-(10, 2, 3, 3, 3, '333333', '333333333', '2018-10-20', 'Perempuan', '', '3', '3', 'Sumatera Utara', 'WNI', 'Sudah Menikah', '333', 'Lahir');
+INSERT INTO `tbl_warga` (`kode`, `kd_lurah`, `kd_pekerjaan`, `kd_pendidikan`, `kd_agama`, `nik`, `nama`, `tgl_lahir`, `jenis_kelamin`, `alamat`, `kecamatan`, `kabupaten`, `provinsi`, `negara`, `status_kawin`, `tempat_lahir`, `jenis`, `tanggal`) VALUES
+(1, 1, 1, 1, 2, '1231231231231231', 'DELISMAN HULU', '1996-02-17', 'Laki-Laki', 'Jln. Layanan Coding', 'Ulu', 'Tae', 'Sumatera Utara', 'WNI', 'Belum Menikah', 'Medan', 'Meninggal', '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -426,7 +391,7 @@ CREATE TABLE IF NOT EXISTS `v_tetap` (
 -- --------------------------------------------------------
 
 --
--- Structure for view `v_datang`
+-- Struktur untuk view `v_datang`
 --
 DROP TABLE IF EXISTS `v_datang`;
 
@@ -435,7 +400,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 -- --------------------------------------------------------
 
 --
--- Structure for view `v_kematian`
+-- Struktur untuk view `v_kematian`
 --
 DROP TABLE IF EXISTS `v_kematian`;
 
@@ -444,7 +409,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 -- --------------------------------------------------------
 
 --
--- Structure for view `v_lahir`
+-- Struktur untuk view `v_lahir`
 --
 DROP TABLE IF EXISTS `v_lahir`;
 
@@ -453,7 +418,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 -- --------------------------------------------------------
 
 --
--- Structure for view `v_penduduk`
+-- Struktur untuk view `v_penduduk`
 --
 DROP TABLE IF EXISTS `v_penduduk`;
 
@@ -462,7 +427,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 -- --------------------------------------------------------
 
 --
--- Structure for view `v_pindah`
+-- Struktur untuk view `v_pindah`
 --
 DROP TABLE IF EXISTS `v_pindah`;
 
@@ -471,7 +436,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 -- --------------------------------------------------------
 
 --
--- Structure for view `v_tetap`
+-- Struktur untuk view `v_tetap`
 --
 DROP TABLE IF EXISTS `v_tetap`;
 
@@ -491,13 +456,13 @@ ALTER TABLE `tbl_agama`
 -- Indexes for table `tbl_kematian`
 --
 ALTER TABLE `tbl_kematian`
- ADD PRIMARY KEY (`kode`);
+ ADD PRIMARY KEY (`kode`), ADD KEY `warga1` (`kd_warga`);
 
 --
 -- Indexes for table `tbl_lahir`
 --
 ALTER TABLE `tbl_lahir`
- ADD PRIMARY KEY (`kode`);
+ ADD PRIMARY KEY (`kode`), ADD KEY `warga2` (`kd_warga`);
 
 --
 -- Indexes for table `tbl_lurah`
@@ -515,7 +480,7 @@ ALTER TABLE `tbl_pekerjaan`
 -- Indexes for table `tbl_pendatang`
 --
 ALTER TABLE `tbl_pendatang`
- ADD PRIMARY KEY (`kode`);
+ ADD PRIMARY KEY (`kode`), ADD KEY `warga3` (`kd_warga`);
 
 --
 -- Indexes for table `tbl_pendidikan`
@@ -527,13 +492,13 @@ ALTER TABLE `tbl_pendidikan`
 -- Indexes for table `tbl_penduduk_tetap`
 --
 ALTER TABLE `tbl_penduduk_tetap`
- ADD PRIMARY KEY (`kode`);
+ ADD PRIMARY KEY (`kode`), ADD KEY `warga5` (`kd_warga`);
 
 --
 -- Indexes for table `tbl_pindah`
 --
 ALTER TABLE `tbl_pindah`
- ADD PRIMARY KEY (`kode`);
+ ADD PRIMARY KEY (`kode`), ADD KEY `warga6` (`kd_warga`);
 
 --
 -- Indexes for table `tbl_user`
@@ -545,7 +510,7 @@ ALTER TABLE `tbl_user`
 -- Indexes for table `tbl_warga`
 --
 ALTER TABLE `tbl_warga`
- ADD PRIMARY KEY (`kode`);
+ ADD PRIMARY KEY (`kode`), ADD KEY `kode11` (`kd_lurah`), ADD KEY `kode12` (`kd_pekerjaan`), ADD KEY `kode13` (`kd_pendidikan`), ADD KEY `kode14` (`kd_agama`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -555,12 +520,12 @@ ALTER TABLE `tbl_warga`
 -- AUTO_INCREMENT for table `tbl_agama`
 --
 ALTER TABLE `tbl_agama`
-MODIFY `kode` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
+MODIFY `kode` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `tbl_kematian`
 --
 ALTER TABLE `tbl_kematian`
-MODIFY `kode` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+MODIFY `kode` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `tbl_lahir`
 --
@@ -570,12 +535,12 @@ MODIFY `kode` int(11) NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `tbl_lurah`
 --
 ALTER TABLE `tbl_lurah`
-MODIFY `kode` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+MODIFY `kode` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `tbl_pekerjaan`
 --
 ALTER TABLE `tbl_pekerjaan`
-MODIFY `kode` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+MODIFY `kode` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `tbl_pendatang`
 --
@@ -585,27 +550,70 @@ MODIFY `kode` int(11) NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `tbl_pendidikan`
 --
 ALTER TABLE `tbl_pendidikan`
-MODIFY `kode` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
+MODIFY `kode` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `tbl_penduduk_tetap`
 --
 ALTER TABLE `tbl_penduduk_tetap`
-MODIFY `kode` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+MODIFY `kode` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `tbl_pindah`
 --
 ALTER TABLE `tbl_pindah`
-MODIFY `kode` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+MODIFY `kode` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
-MODIFY `kode` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+MODIFY `kode` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `tbl_warga`
 --
 ALTER TABLE `tbl_warga`
-MODIFY `kode` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
+MODIFY `kode` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+--
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
+--
+
+--
+-- Ketidakleluasaan untuk tabel `tbl_kematian`
+--
+ALTER TABLE `tbl_kematian`
+ADD CONSTRAINT `warga1` FOREIGN KEY (`kd_warga`) REFERENCES `tbl_warga` (`kode`);
+
+--
+-- Ketidakleluasaan untuk tabel `tbl_lahir`
+--
+ALTER TABLE `tbl_lahir`
+ADD CONSTRAINT `warga2` FOREIGN KEY (`kd_warga`) REFERENCES `tbl_warga` (`kode`);
+
+--
+-- Ketidakleluasaan untuk tabel `tbl_pendatang`
+--
+ALTER TABLE `tbl_pendatang`
+ADD CONSTRAINT `warga3` FOREIGN KEY (`kd_warga`) REFERENCES `tbl_warga` (`kode`);
+
+--
+-- Ketidakleluasaan untuk tabel `tbl_penduduk_tetap`
+--
+ALTER TABLE `tbl_penduduk_tetap`
+ADD CONSTRAINT `warga5` FOREIGN KEY (`kd_warga`) REFERENCES `tbl_warga` (`kode`);
+
+--
+-- Ketidakleluasaan untuk tabel `tbl_pindah`
+--
+ALTER TABLE `tbl_pindah`
+ADD CONSTRAINT `warga6` FOREIGN KEY (`kd_warga`) REFERENCES `tbl_warga` (`kode`);
+
+--
+-- Ketidakleluasaan untuk tabel `tbl_warga`
+--
+ALTER TABLE `tbl_warga`
+ADD CONSTRAINT `kode11` FOREIGN KEY (`kd_lurah`) REFERENCES `tbl_lurah` (`kode`),
+ADD CONSTRAINT `kode12` FOREIGN KEY (`kd_pekerjaan`) REFERENCES `tbl_pekerjaan` (`kode`),
+ADD CONSTRAINT `kode13` FOREIGN KEY (`kd_pendidikan`) REFERENCES `tbl_pendidikan` (`kode`),
+ADD CONSTRAINT `kode14` FOREIGN KEY (`kd_agama`) REFERENCES `tbl_agama` (`kode`);
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
